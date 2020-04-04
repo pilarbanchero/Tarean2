@@ -56,6 +56,8 @@ public class usuario{
         public void setSaldo(int unSaldo){
             saldo=unSaldo;
         }
+        
+        
 
         public usuario(String unNombre, String unaCedula, String unaContraseña, int unaEdad,int unaCantidadDeHijos,int unSaldo ) {
           this.setNombre(unNombre);
@@ -66,5 +68,10 @@ public class usuario{
           this.setSaldo(unSaldo);
           
         } 
+        
+        @Override
+        public boolean equals (Object o){
+            return this.getCedula().equalsIgnoreCase(((usuario)o).getCedula());
+        }
    
 }
