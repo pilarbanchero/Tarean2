@@ -14,7 +14,7 @@ public class FuncionesUsuario {
             }
             if (cantidadDeHijos >= 1) {
                 int porcentaje = ((3 * impuesto) / 100 )* cantidadDeHijos;
-                if (porcentaje * 2 < impuesto) {
+                if (porcentaje * 2 <= impuesto) {
                     impuesto = impuesto - porcentaje;
                 } else {
                     impuesto = impuesto / 2;
@@ -22,5 +22,10 @@ public class FuncionesUsuario {
             }
         }
         return impuesto;
+    }
+ 
+    public int cobroDeSueldo(int saldo, int cantidadServiciosLaborales){
+        int sueldo= saldo + cantidadServiciosLaborales;
+        return sueldo;
     }
 }
